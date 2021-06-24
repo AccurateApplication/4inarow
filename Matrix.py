@@ -5,8 +5,7 @@ class Matrix:
         self.rows, self.columns = 6, 7
         self.matrix = np.zeros([self.rows, self.columns])
 
-    def add_Chip(self, player, col):
-
+    def add_chip(self, player, col):
         try:
             for i in range(self.rows):
                 if self.matrix[i][col] == 0:
@@ -17,6 +16,8 @@ class Matrix:
 
         finally:
             print("Did not work")
+
+        return self.matrix
 
     def print_board(self):
         print(self.matrix)
